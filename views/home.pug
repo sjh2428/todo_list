@@ -1,0 +1,22 @@
+extends layout/main
+include mixin/todoBlock
+
+block content
+    .home-main
+        .todo-header
+            h1 TODO List
+            h2 for Community
+            button(type="button", class="btn btn-primary btn-todo-add-main", data-toggle="modal", data-target="#TodoActionModal") Add Todo List!
+            h6.error-message
+        .todo-lists-container
+            each row in rows
+                +todoBlock({
+                    todo_id: row.todo_id,
+                    priority: row.priority,
+                    title: row.title,
+                    contents: row.contents,
+                    is_dead_line: row.is_dead_line,
+                    dead_line_date: row.dead_line_date,
+                    dead_line_time: row.dead_line_time,
+                    completed: row.completed
+                })

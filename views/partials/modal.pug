@@ -1,0 +1,56 @@
+<div class="modal fade" id="TodoActionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="todo-modal-title">New Todo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="todo-title" class="col-form-label">Title:</label>
+            <input type="text" class="form-control" id="todo-title" maxlength="60" placeholder="You can input 60 characters.">
+          </div>
+          <div class="form-group">
+            <label for="todo-contents" class="col-form-label">Contents:</label>
+            <textarea class="form-control" id="todo-contents" maxlength="200" placeholder="You can input 200 characters."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="todo-priority">Priority</label>
+            <select id="todo-priority" class="form-control">
+              <option value=3 selected>Normal</option>
+              <option value=2>Urgent</option>
+              <option value=1>Very Urgent</option>
+            </select>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="todo-deadline-check">
+            <label class="form-check-label" for="todo-deadline-check">Set Deadline</label>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="todo-completed">
+            <label class="form-check-label" for="todo-completed">Complete</label>
+          </div>
+          <div id="todo-deadline-container" style="display: none;">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="todo-date">Date</label>
+                <input type="date" class="form-control" id="todo-date" value="2000-01-01" min="2000-01-01" max="2999-12-31">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="todo-time">Time</label>
+                <input type="time" class="form-control" id="todo-time" value="12:00">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary btn-todo-ok">Add Todo</button>
+      </div>
+    </div>
+  </div>
+</div>

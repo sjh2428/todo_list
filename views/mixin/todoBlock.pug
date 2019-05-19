@@ -1,0 +1,83 @@
+mixin todoBlock(todo = {})
+    .todo-list
+        if todo.completed == 1
+            .card-container(style="opacity: 0.5;")
+                <div class="card text-white bg-secondary todo-title-part">
+                    <div class="card-body card-text todo-title">
+                        |#{todo.title}
+                        <button class="btn btn-danger btn-sm btn-todo-delete" data=#{todo.todo_id}>Delete</button>
+                        <i class="far fa-bell" style="display: none;"></i>
+                    </div>
+                </div>
+                <div class="card text-white bg-secondary todo-content-part" style="display: none;">
+                    <div class="card-body">
+                        if (todo.is_dead_line == 1)
+                            <div class="card-text text-right">Dead-Line : <span class="todo-date">#{todo.dead_line_date}</span> <span class="todo-time">#{todo.dead_line_time}</span></div>
+                        <pre class="card-text todo-contents">#{todo.contents}</pre>
+                        <div class="todo-priority" style="display: none;">#{todo.priority}</div>
+                        <div class="todo-is-dead-line" style="display: none;">#{todo.is_dead_line}</div>
+                        <div class="todo-completeds" style="display: none;">#{todo.completed}</div>
+                        <button class="btn btn-primary btn-sm btn-todo-modify" data=#{todo.todo_id} data-toggle="modal" data-target="#TodoActionModal">Modify</button>
+                    </div>
+                </div>
+        else
+            if todo.priority == 1
+                .card-container
+                    <div class="card border-danger todo-title-part">
+                        <div class="card-body text-danger card-text todo-title">
+                            |#{todo.title}
+                            <button class="btn btn-danger btn-sm btn-todo-delete" data=#{todo.todo_id}>Delete</button>
+                            <i class="far fa-bell" style="display: none;"></i>
+                        </div>
+                    </div>
+                    <div class="card border-danger todo-content-part" style="display: none;">
+                        <div class="card-body text-danger">
+                            if (todo.is_dead_line == 1)
+                                <div class="card-text text-right">Dead-Line : <span class="todo-date">#{todo.dead_line_date}</span> <span class="todo-time">#{todo.dead_line_time}</span></div>
+                            <pre class="card-text todo-contents">#{todo.contents}</pre>
+                            <div class="todo-priority" style="display: none;">#{todo.priority}</div>
+                            <div class="todo-is-dead-line" style="display: none;">#{todo.is_dead_line}</div>
+                            <div class="todo-completeds" style="display: none;">#{todo.completed}</div>
+                            <button class="btn btn-primary btn-sm btn-todo-modify" data=#{todo.todo_id} data-toggle="modal" data-target="#TodoActionModal">Modify</button>
+                        </div>
+                    </div>
+            else if todo.priority == 2
+                .card-container
+                    <div class="card border-primary todo-title-part">
+                        <div class="card-body text-primary card-text todo-title">
+                            |#{todo.title}
+                            <button class="btn btn-danger btn-sm btn-todo-delete" data=#{todo.todo_id}>Delete</button>
+                            <i class="far fa-bell" style="display: none;"></i>
+                        </div>
+                    </div>
+                    <div class="card border-primary todo-content-part" style="display: none;">
+                        <div class="card-body text-primary">
+                            if (todo.is_dead_line == 1)
+                                <div class="card-text text-right">Dead-Line : <span class="todo-date">#{todo.dead_line_date}</span> <span class="todo-time">#{todo.dead_line_time}</span></div>
+                            <pre class="card-text todo-contents">#{todo.contents}</pre>
+                            <div class="todo-priority" style="display: none;">#{todo.priority}</div>
+                            <div class="todo-is-dead-line" style="display: none;">#{todo.is_dead_line}</div>
+                            <div class="todo-completeds" style="display: none;">#{todo.completed}</div>
+                            <button class="btn btn-primary btn-sm btn-todo-modify" data=#{todo.todo_id} data-toggle="modal" data-target="#TodoActionModal">Modify</button>
+                        </div>
+                    </div>
+            else
+                .card-container
+                    <div class="card border-dark todo-title-part">
+                        <div class="card-body text-dark card-text todo-title">
+                            |#{todo.title}
+                            <button class="btn btn-danger btn-sm btn-todo-delete" data=#{todo.todo_id}>Delete</button>
+                            <i class="far fa-bell" style="display: none;"></i>
+                        </div>
+                    </div>
+                    <div class="card border-dark todo-content-part" style="display: none;">
+                        <div class="card-body text-dark">
+                            if (todo.is_dead_line == 1)
+                                <div class="card-text text-right">Dead-Line : <span class="todo-date">#{todo.dead_line_date}</span> <span class="todo-time">#{todo.dead_line_time}</span></div>
+                            <pre class="card-text todo-contents">#{todo.contents}</pre>
+                            <div class="todo-priority" style="display: none;">#{todo.priority}</div>
+                            <div class="todo-is-dead-line" style="display: none;">#{todo.is_dead_line}</div>
+                            <div class="todo-completeds" style="display: none;">#{todo.completed}</div>
+                            <button class="btn btn-primary btn-sm btn-todo-modify" data=#{todo.todo_id} data-toggle="modal" data-target="#TodoActionModal">Modify</button>
+                        </div>
+                    </div>

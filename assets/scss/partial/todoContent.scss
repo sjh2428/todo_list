@@ -1,0 +1,31 @@
+.todo-lists-container {
+    width: 600px;
+}
+
+.todo-content-part {
+    position: relative;
+    height: 200px;
+    display: none;
+}
+
+.todo-title-part {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.fa-bell {
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-todo-delete {
+    float: right;
+}
+
+.btn-todo-modify {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}

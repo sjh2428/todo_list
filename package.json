@@ -1,0 +1,39 @@
+{
+  "name": "todo_list",
+  "version": "1.0.0",
+  "description": "2019 Summer Internship Assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js --delay 2 --ignore '.scss' --ignore 'static' ",
+    "dev:assets": "webpack -w --mode development",
+    "build:assets": "webpack -w --mode production"
+  },
+  "author": "Jay",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/node": "^7.2.2",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^9.5.1",
+    "axios": "^0.18.0",
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.19.0",
+    "css-loader": "^2.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "helmet": "^3.18.0",
+    "mongodb": "^3.2.4",
+    "mongoose": "^5.5.8",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.0",
+    "postcss-loader": "^3.0.0",
+    "pug": "^2.0.3",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
