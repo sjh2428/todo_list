@@ -12,7 +12,6 @@ $ npm run dev:assets
 ```
 
 ## Start
---------
 터미널을 하나 더 열어서 다음과 같은 명령어로 서버를 시작해줍니다.
 ```
 $ npm start
